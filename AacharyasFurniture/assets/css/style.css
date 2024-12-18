@@ -77,6 +77,7 @@ ul{
 }
 ul li {
 	list-style: none;
+	font-size: 16px;
 	
 }
 select,input,textarea,button{box-shadow:none;outline:0!important;}
@@ -116,9 +117,10 @@ nav.navbar.bootsnav {
     border-bottom: transparent;
 }
 .wrap-sticky nav.navbar.bootsnav.sticked {background-color: #fff;box-shadow: 0 2px 5px rgba(0,0,0,.2);}
-/*.navbar-brand*/
+/* /.navbar-brand/ */
+
 /*.navbar-header a.navbar-brand,.navbar-header a.navbar-brand:hover,.navbar-header a.navbar-brand:focus {
-    display: inline-block;
+    display: inline-block;	
     color: #616060;
     font-size: 24px;
     font-weight: 500;
@@ -152,9 +154,9 @@ nav.navbar.bootsnav {
 
 
 .wrap-sticky nav.navbar.bootsnav.sticked .navbar-header a.navbar-brand,.wrap-sticky nav.navbar.bootsnav.sticked .navbar-header a.navbar-brand:hover,.wrap-sticky nav.navbar.bootsnav.sticked .navbar-header a.navbar-brand:focus {padding:30px 0px;}
-/*.navbar-brand*/
+/* /.navbar-brand/ */
 
-/*.nav li*/
+/* /.nav li/ */
 nav.navbar.bootsnav ul.nav > li > a {
     color: #616060;
     font-size: 16px;
@@ -178,9 +180,9 @@ nav.navbar.bootsnav ul.nav > li.dropdown span {
     margin-left: 15px;
 }
 .wrap-sticky nav.navbar.bootsnav.sticked ul.nav > li > a{padding:30px 25px;}
-/*.nav li*/
+/* /.nav li/ */
 
-/*.menu-ui-design*/
+/* /.menu-ui-design/ */
 .menu-ui-design{overflow-y:scroll;height: 350px;}
 .menu-ui-design::-webkit-scrollbar {
     width:5px;
@@ -191,9 +193,9 @@ nav.navbar.bootsnav ul.nav > li.dropdown span {
 .menu-ui-design::-webkit-scrollbar-thumb {
   background-color: #e99c2e;
 }
-/*.menu-ui-design*/
+/* /.menu-ui-design/ */
 
-/*.attr-nav*/
+/* /.attr-nav/ */
 .attr-nav {
     position: relative;
     top:5px;
@@ -206,9 +208,9 @@ nav.navbar.bootsnav ul.nav > li.dropdown span {
 }
 .attr-nav > ul > li > a:hover{color: #e99c2e;}
 .wrap-sticky nav.navbar.bootsnav.sticked .attr-nav > ul > li > a {padding:28px 15px;}
-/*.attr-nav*/
+/* /.attr-nav/ */
 
-/*badge*/
+/* /badge/ */
 .badge {
     background-color: #e99c2e;
     border: 2px solid #e99c2e;
@@ -219,7 +221,7 @@ nav.navbar.bootsnav ul.nav > li.dropdown span {
     height: 20px;
     padding-top: 3px;
 }
-/*.badge*/
+/* /.badge/ */
 
 /*.navbar-toggle */
 nav.navbar.bootsnav .navbar-toggle {
@@ -232,7 +234,7 @@ nav.navbar.bootsnav .navbar-toggle {
 nav.navbar.bootsnav .navbar-toggle i{color: #e99c2e;}
 /*.navbar-toggle */
 
-/*.cart-list*/
+/* /.cart-list/ */
 ul.dropdown-menu.cart-list {
     height: 232px;
     overflow-y: scroll;
@@ -303,7 +305,7 @@ ul.cart-list > li.total {
     text-transform: capitalize;
     border-radius: 3px;
 }
-/*.cart-list*/
+/* /.cart-list/ */
 
 /*.packages-price */
 .packages-price p{
@@ -340,7 +342,8 @@ ul.cart-list > li.total {
 .single-slide-item.slide2{background:transparent;}
 .single-slide-item.slide3{background:transparent;}
 
-/*welcome-hero-content*/
+/* /welcome-hero-content/ */
+
 .single-welcome-hero{
     display: flex;
     align-items: center;
@@ -410,7 +413,7 @@ ul.cart-list > li.total {
     color: #e99c2e;
     border: 1px solid #e99c2e;
 }
-/*welcome-hero-content*/
+/* /welcome-hero-content/ */
 
 /* .carousel-indicators */
 .carousel-indicators {bottom: 4.5%;}
@@ -560,22 +563,98 @@ ul.cart-list > li.total {
 
 .single-new-arrival{margin-bottom: 50px;text-align: center;}
 .single-new-arrival-bg {
-    position: relative;
-    min-height: 310px;
-    background: #f8f9fc;
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    overflow:hidden;
+    /* width: 100%;
+    height: auto;
+    object-fit: contain; /* This ensures the image is not cropped */
+    /* -webkit-transition: .3s linear;
+    -moz-transition: .3s linear;
+    -ms-transition: .3s linear;
+    -o-transition: .3s linear;
+    transition: .3s linear; */ 
+    width: 100%;                /* Full width of the container */
+    height: 300px;              /* Fixed height for consistency, adjust as needed */
+    display: flex;              /* Flexbox for centering content */
+    justify-content: center;    /* Horizontally center content */
+    align-items: center;        /* Vertically center content */
+    padding: 15px;              /* Padding around the image */
+    background-color: #f8f9fc;  /* Light background for visual appeal */
+    overflow: hidden;           /* Prevents overflow outside the container */
+    border-radius: 10px;        /* Rounded corners for a smooth appearance */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
 }
+.single-new-arrival-bg:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover for interactivity */
+}
+
+
+
+
+
+/* Initially hide the card and position it off-screen to the right */
+.card-container {
+    opacity: 0;
+    transform: translateX(100%); /* Start off-screen (right) */
+    transition: transform 1s ease, opacity 1s ease; /* Smooth transition */
+}
+
+/* Class to make the card visible and slide to its original position */
+.card-container.visible {
+    opacity: 1;                   /* Make the card visible */
+    transform: translateX(0);     /* Move the card to its original position */
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+/* Animation for the text content */
+@keyframes slideText {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Text starts off-screen */
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0);   /* Text slides up */
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px); /* Text slides out */
+    }
+}
+
+/* Apply the text animation */
+.transition-text {
+    animation: slideText 3s ease-in-out infinite; /* Infinite loop every 3 seconds */
+}
+
+/* Optional: Image hover effect */
+img {
+    transition: transform 1s ease;
+}
+
+img:hover {
+    transform: scale(1.05); /* Scale the image slightly on hover */
+}
+
+
+
+
+
 .single-new-arrival-bg img{
-    width:auto;
+    /* width:auto;
     height:auto;
     -webkit-transition: .3s linear;
     -moz-transition: .3s linear;
     -ms-transition: .3s linear;
     -o-transition: .3s linear;
-    transition: .3s linear;
+    transition: .3s linear; */
+    
+
+    width: 60%;              /* Reduce the width of the image to 60% of its container */
+    height: auto;            /* Keep the aspect ratio intact */
+    object-fit: contain;     /* Ensure the image fits without cropping */
+    object-position: center; /* Center the image inside the container */
+
+
 }
 .single-new-arrival-bg:hover  img{
     -webkit-transform:scale(1.3);
@@ -760,7 +839,7 @@ span.feature-review {margin-left: 10px;}
 --------------------------------------*/
 .blog {padding:80px 0;}
 
-/*.single-blog*/
+/* /.single-blog/ */
 .single-blog{
     -webkit-transition: 0.3s linear; 
     -moz-transition: 0.3s linear; 
@@ -832,7 +911,7 @@ span.feature-review {margin-left: 10px;}
     color: #95908b;
 }
 .single-blog:hover .single-blog-txt h2 a{color: #e99c2e;}
-/*.single-blog*/
+/* /.single-blog/ */
 
 /*-------------------------------------
         9. Clients
@@ -880,7 +959,7 @@ span.feature-review {margin-left: 10px;}
     margin-bottom: 25px;
 }
 
-/*hm-foot-email*/
+/* hm-foot-email */
 .hm-foot-email{position: relative;}
 .foot-email-box .form-control {
     background:#fff;
@@ -910,7 +989,7 @@ span.feature-review {margin-left: 10px;}
 .foot-email-box .form-control:hover{
     box-shadow:0 5px 15px rgba(0,0,0,.4);
 }
-/*hm-foot-email*/
+/* /hm-foot-email/ */
 
 
 /*-------------------------------------
@@ -1064,4 +1143,6 @@ span.feature-review {margin-left: 10px;}
     0%   {bottom:0px;}
     100%  {bottom:7px;}
 }
+
+
 /*========================Thank you=================

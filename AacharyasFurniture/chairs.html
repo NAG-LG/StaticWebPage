@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aacharya's Furniture & Interio</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <div>
+        <section class="bg-gray-100 py-12">
+            <div class="container mx-auto text-center">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Aacharya's Chair's</h2>
+                
+                <!-- Grid Container -->
+                <div id="featured-products-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                </div>
+            </div>
+        </section>
+        
+        <script>
+            const featuredProducts = [
+                { name: "you can place a new item", image: "# "  },
+                { name: "you can place a new item", image: "# "  },
+                { name: "you can place a new item", image: "# "  },
+                { name: "you can place a new item", image: "# " },
+                { name: "you can place a new item", image: "# " },
+                { name: "you can place a new item", image: "#" },
+                { name: "you can place a new item", image: "#" },
+                { name: "you can place a new item", image: "#"},
+                { name: "you can place a new item", image: "#" }
+            ];
+
+            const container3 = document.getElementById("featured-products-container");
+
+            featuredProducts.forEach(item => {
+                const productDiv = document.createElement("div");
+                productDiv.className = "group flex flex-col items-center bg-white p-4 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300";
+
+                productDiv.innerHTML = `
+                    <div class="w-full h-48 bg-white-300 rounded-lg overflow-hidden">
+                        <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover group-hover:opacity-90 transition-opacity duration-300">
+                    </div>
+                    <p class="text-gray-700 mt-4 font-medium text-lg">${item.name}</p>
+                `;
+
+                container3.appendChild(productDiv);
+            });
+        </script>
+    </div>
+
+</body>
+</html>

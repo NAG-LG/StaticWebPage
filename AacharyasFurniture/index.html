@@ -1,119 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> 
-    <title>Static Page with Tailwind CSS</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  </head>
-  <body class="bg-gray-100 text-gray-800">
-	
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<title>Static Page with Tailwind CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.tailwindcss.com"></script>
+<link
+	href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+	rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
 	<!-- Navigation bar  -->
-    <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
-		<div class="container mx-auto px-4 py-4 flex justify-between items-center">
-		  
-		  <div class="flex items-center pl-96">
-			<img src="assets/images/logo/logo.jpg" alt="Logo" class="h-12 mr-4"> <!-- Logo -->
-			<div>
-			  <a href="#" class="text-2xl font-bold text-amber-600 block">Aacharya's</a>
-			  <span class="text-sm text-gray-500">Interio & Furniture</span>
+	<nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+		<div
+			class="container mx-auto px-4 py-4 flex justify-between items-center">
+
+			<div class="flex items-center pl-96">
+				<img src="assets/images/logo/logo.jpg" alt="Logo" class="h-12 mr-4">
+				<!-- Logo -->
+				<div>
+					<a href="#" class="text-2xl font-bold text-amber-600 block">Aacharya's</a>
+					<span class="text-sm text-gray-500">Furniture & Interio</span>
+				</div>
 			</div>
-		  </div>
-	  
-		  
-		  <ul class="hidden md:flex space-x-10 text-lg font-bold pr-96">
-			<li><a href="#" class="text-gray-700 hover:text-amber-600">Home</a></li>
-			<li><a href="about.html" class="text-gray-700 hover:text-amber-600">About</a></li>
-			<li><a href="#" class="text-gray-700 hover:text-amber-600">Services</a></li>
-			<li><a href="#" class="text-gray-700 hover:text-amber-600">Contact</a></li>
-		  </ul>
+
+			<ul class="hidden md:flex space-x-10 text-lg font-bold pr-96">
+				<li><a href="#" class="text-gray-700 hover:text-amber-600">Home</a></li>
+				<li><a href="about.html"
+					class="text-gray-700 hover:text-amber-600">About</a></li>
+
+<!-- 
+				<li class="relative"><a href="#"
+					class="text-gray-700 hover:text-amber-600" id="servicesMenuButton">Services</a>
+
+					Dropdown Menu
+					<ul id="servicesMenu"
+						class="absolute left-0 hidden bg-white shadow-md mt-2 w-40 rounded-md">
+						<li><a href="#"
+							class="block px-4 py-2 text-gray-700 hover:bg-amber-600 hover:text-white">Design</a></li>
+						<li><a href="#"
+							class="block px-4 py-2 text-gray-700 hover:bg-amber-600 hover:text-white">Consultation</a></li>
+						<li><a href="#"
+							class="block px-4 py-2 text-gray-700 hover:bg-amber-600 hover:text-white">Installation</a></li>
+					</ul></li>
+
+				JavaScript for handling the dropdown toggle
+				<script>
+					  document.getElementById('servicesMenuButton').addEventListener('click', function(e) {
+					    e.preventDefault();
+					    const menu = document.getElementById('servicesMenu');
+					    menu.classList.toggle('hidden');
+					  });
+				</script>
+ -->
+
+				<li class="relative"><a href="#"
+					class="text-gray-700 hover:text-amber-600 flex items-center"
+					id="servicesMenuButton"> Services <!-- Down Arrow Icon --> <i
+						id="downArrow" class="fas fa-chevron-down ml-2"></i>
+				</a> <!-- Dropdown Menu -->
+					<ul id="servicesMenu"
+						class="absolute left-0 hidden bg-white shadow-md mt-2 w-40 rounded-md">
+						<li><a href="interio.html"class="block px-4 py-2 text-gray-700 hover:bg-amber-600 hover:text-white">Interio</a></li>
+						<li><a href="furniture.html"class="block px-4 py-2 text-gray-700 hover:bg-amber-600 hover:text-white">Furniture</a></li>
+						<li><a href="carpentery.html"class="block px-4 py-2 text-gray-700 hover:bg-amber-600 hover:text-white">Carpentery</a></li>
+					</ul></li>
+
+				<!-- JavaScript for handling the dropdown toggle -->
+			<script>
+					  document.getElementById('servicesMenuButton').addEventListener('click', function(e) {
+					    e.preventDefault();
+					    const menu = document.getElementById('servicesMenu');
+					    const downArrow = document.getElementById('downArrow');
+					
+					    // Toggle the dropdown visibility
+					    menu.classList.toggle('hidden');
+					
+					    // Toggle the arrow direction (up/down)
+					    if (menu.classList.contains('hidden')) {
+					      downArrow.classList.replace('fa-chevron-up', 'fa-chevron-down');
+					    } else {
+					      downArrow.classList.replace('fa-chevron-down', 'fa-chevron-up');
+					    }
+					  });
+</script>
+
+				<li><a href="#" class="text-gray-700 hover:text-amber-600">Contact</a></li>
+			</ul>
+
 		</div>
-	  </nav>
-	  
-	  
-	  <!-- Hero section -->
-    <section id="hero-section" class="bg-gray-100 py-12 flex justify-center items-center min-h-screen">
-		<div class="w-[900px] flex items-center">
-		
-			<div class="w-1/2 text-left">
-				<h2 class="text-xl font-semibold text-gray-700">Great Design Collection</h2>
-				<h1 class="text-4xl font-bold text-gray-900 my-4">
-					Cloth Covered Accent Chair
-				</h1>
-				<p class="text-gray-600 mb-6">
-					Looking for a great comfort with a stylish chair? Here we go: stunning looks for your lounge.
-				</p>
-				<a href="#" class="text-amber-600 font-semibold hover:underline">More Info</a>
+	</nav>
+
+
+	<!-- Hero section -->
+	<section id="hero-section"
+		class="bg-gray-100 py-12 flex justify-center min-h-screen">
+		<!-- Single Card Container with Transparent Background, No Shadow, No Border -->
+		<div
+			class="card-container max-w-4xl w-full p-6 rounded-lg flex flex-col md:flex-row items-center text-center md:text-left bg-transparent">
+
+			<!-- Text Content Section -->
+			<div class="md:w-1/2 text-center md:text-left mb-6 md:mb-0">
+				<h2 class="text-xl font-semibold text-gray-700">Great Design
+					Collection</h2>
+				<h1 class="text-4xl font-bold text-gray-900 my-4 transition-text">
+					Cloth Covered Accent Chair</h1>
+				<p class="text-gray-600 mb-6">Looking for a great comfort with a
+					stylish chair? Here we go: stunning looks for your lounge.</p>
+				<a href="#" class="text-amber-600 font-semibold hover:underline">More
+					Info</a>
 			</div>
-	
-			
-			<div class="w-1/2 flex justify-center">
-				<img src="assets/images/image.png" alt="Cloth Covered Accent Chair" class="rounded-lg shadow-lg">
+
+			<!-- Image Section -->
+			<div class="md:w-1/2 flex justify-center">
+				<img src="assets/images/image.png" alt="Cloth Covered Accent Chair"
+					class="rounded-lg w-full max-w-sm">
 			</div>
+
 		</div>
 	</section>
 
-	
+
+
 	<!-- popular categories -->
-	<section id="popular-categories" class="bg-gray-100 py-12">
+	<!-- <section id="popular-categories" class="bg-gray-100 py-12">
 		<div class="container mx-auto text-center">
-			<h2 class="text-2xl font-bold text-gray-900 mb-6">Popular Categories</h2>
-			<div id="categories-container" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8"></div>
+			<h2 class="text-2xl font-bold text-gray-900 mb-6">Popular
+				Categories</h2>
+			<div id="categories-container"
+				class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8"></div>
 		</div>
-	</section>
+	</section> -->
 	
+	
+	<section id="popular-categories" class="bg-gray-100 py-12">
+	<div class="container mx-auto text-center">
+		<h2 class="text-2xl font-bold text-gray-900 mb-6">Popular Categories</h2>
+		<div id="categories-container"
+			class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+		</div>
+	</div>
+</section>
+
 	<script>
 		
 		const categories = [
-			{ name: "Bed", icon: "fa-bed" },
-			{ name: "Book Shelve", icon: "fa-book" },
-			{ name: "Center Table", icon: "fa-table" },
-			{ name: "Chairs", icon: "fa-chair" },
-			{ name: "Dining", icon: "fa-utensils" },
-			{ name: "Dressing Table", icon: "fa-mirror" },
-			{ name: "Furnishings", icon: "fa-couch" },
-			{ name: "Giftings", icon: "fa-gift" },
-			{ name: "Home Decor", icon: "fa-home" },
-			{ name: "Mattress", icon: "fa-bed" },
-			{ name: "Office & Study Table", icon: "fa-laptop" },
-			{ name: "Outdoor", icon: "fa-tree" },
-			{ name: "Recliner", icon: "fa-couch" },
-			{ name: "Shoe Rack", icon: "fa-shoe-prints" },
-			{ name: "Sofa", icon: "fa-couch" },
-			{ name: "Wardrobes", icon: "fa-wardrobe" } // Replace with a relevant FontAwesome icon class if available
+			{ name: "Bed", icon: "fa-bed", link: "bed.html" },
+			{ name: "Book Shelve", icon: "fa-book",link: "book shelves.html" },
+			{ name: "Center Table", icon: "fa-table", link: "center table.html" },
+			{ name: "Chairs", icon: "fa-chair", link: "chairs.html" },
+			{ name: "Dining", icon: "fa-utensils", link: "dinning.html" },
+			{ name: "Furnishings", icon: "fa-couch", link: "furnishings.html" },
+			{ name: "Giftings", icon: "fa-gift", link: "giftings.html" },
+			{ name: "Home Decor", icon: "fa-home", link: "home decor.html" },
+			{ name: "Mattress", icon: "fa-bed", link: "mattress.html" },
+			{ name: "Office & Study Table", icon: "fa-laptop", link: "office & study table.html"},
+			{ name: "Outdoor", icon: "fa-tree", link: "outdoor.html" },
+			{ name: "Recliner", icon: "fa-couch" , link: "recliner.html"},
+			{ name: "Shoe Rack", icon: "fa-shoe-prints", link: "shoe rack.html" },
+			{ name: "Sofa", icon: "fa-couch" , link: "sofa.html"},
+			{ name: "Wardrobes & Dressing Tables", icon: "fa-table-columns", link: "wardrobes & dressing tables.html" } // Replace with a relevant FontAwesome icon class if available
 		];
 	
-		
-		const container = document.getElementById("categories-container");
-	
-		
-		categories.forEach(category => {
-			const categoryDiv = document.createElement("div");
-			categoryDiv.className = "group flex flex-col items-center transition-transform duration-300";
-			categoryDiv.innerHTML = `
-				<div class="text-amber-600 text-5xl group-hover:text-amber-700 group-hover:scale-110">
-					<i class="fa-solid ${category.icon}"></i>
-				</div>
-				<p class="text-gray-700 mt-2 font-medium">${category.name}</p>
-			`;
-			container.appendChild(categoryDiv);
-		});
-	</script>
-	
-	
+const container = document.getElementById("categories-container");
 
-    <!-- New arrivals -->
-    <section class="bg-gray-100 py-12">
+categories.forEach(category => {
+    const categoryDiv = document.createElement("div");
+    categoryDiv.className = "group flex flex-col items-center transition-transform duration-300";
+
+    // Add anchor tag for redirection
+    categoryDiv.innerHTML = `
+        <a href="${category.link}" class="flex flex-col items-center">
+            <div class="text-amber-600 text-5xl group-hover:text-amber-700 group-hover:scale-110">
+                <i class="fa-solid ${category.icon}"></i>
+            </div>
+            <p class="text-gray-700 mt-2 font-medium">${category.name}</p>
+        </a>
+    `;
+    container.appendChild(categoryDiv);
+});
+
+</script>
+
+
+	<!-- New arrivals -->
+	<section class="bg-gray-100 py-12">
 		<div class="container mx-auto text-center">
 			<h2 class="text-2xl font-bold text-gray-900 mb-6">New Arrivals</h2>
-			<div id="new-arrivals-container" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8">
-			</div>
+			<div id="new-arrivals-container"
+				class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 "
+				style="padding: 0px 20px 0px;"></div>
 		</div>
 	</section>
-	
+
 	<script>
 		
 		const newArrivals = [
@@ -130,15 +213,16 @@
 		
 		const container2 = document.getElementById("new-arrivals-container");
 	
-		
+
 		newArrivals.forEach(item => {
 			const arrivalDiv = document.createElement("div");
-			arrivalDiv.className = "group flex flex-col items-center bg-gray-200 p-4 rounded-lg shadow-lg transition-all duration-300 hover:scale-105";
+			arrivalDiv.className = "group flex flex-col items-center bg-white p-4 rounded-lg shadow-5xl hover:shadow-2xl transition-all duration-300";
 	
 			
 			arrivalDiv.innerHTML = `
-				<div class="w-full h-64 bg-gray-300 rounded-lg flex justify-center items-center overflow-hidden">
-					<img src="${item.image}" alt="${item.name}" class="size-[120px] object-cover group-hover:opacity-90 transition-opacity duration-300">
+				<div class="w-40 h-40 bg-white-300 rounded-lg flex justify-center items-center overflow-hidden">
+					<img src="${item.image}" alt="${item.name}" class="w-40 h-40 object-contain group-hover:opacity-90 transition-opacity duration-300">
+
 				</div>
 				<p class="text-gray-700 mt-2 font-medium">${item.name}</p>
 			`;
@@ -147,83 +231,49 @@
 			container2.appendChild(arrivalDiv);
 		});
 	</script>
-	
-	<!-- Featured Products  -->
-	<section class="bg-gray-100 py-12">
+
+
+
+	<!-- Footer -->
+	<footer class="bg-gray-900 text-white py-6">
 		<div class="container mx-auto text-center">
-			<h2 class="text-2xl font-bold text-gray-900 mb-6">Featured Products</h2>
-			<div id="featured-products-container" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8">
-			</div>
-		</div>
-	</section>
-	
-	<script>
-		
-		const featuredProducts = [
-			{ name: "Designed Sofa", image: "assets/images/features/f1.jpg" },
-			{ name: "Dining Table", image: "assets/images/features/f2.jpg" },
-			{ name: "Chair and Table", image: "assets/images/features/f3.jpg" },
-			{ name: "Modern Armchair", image: "assets/images/features/f4.jpg" }
-		];
-	
-		
-		const container3 = document.getElementById("featured-products-container");
-	
-		
-		featuredProducts.forEach(item => {
-			const productDiv = document.createElement("div");
-			productDiv.className = "group flex flex-col items-center bg-white p-4 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300";
-	
-			
-			productDiv.innerHTML = `
-				<div class="w-full h-48 bg-gray-300 rounded-lg overflow-hidden">
-					<img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover group-hover:opacity-90 transition-opacity duration-300">
+			<div
+				class="flex flex-col sm:flex-row justify-between items-center mb-4">
+
+				<div class="mb-4 sm:mb-0" style="padding-left: 50px;">
+					<h1 class="text-2xl font-bold">Aacharya's Furniture & Interio</h1>
 				</div>
-				<p class="text-gray-700 mt-2 font-medium">${item.name}</p>
-			`;
-			
-			
-			container3.appendChild(productDiv);
-		});
-	</script>
-	
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-6">
-		<div class="container mx-auto text-center">
-			<div class="flex flex-col sm:flex-row justify-between items-center mb-4">
-				
-				<div class="mb-4 sm:mb-0">
-					<h1 class="text-2xl font-bold">Aacharya's Interio & Furniture</h1>
-				</div>
-	
-				
-				<div class="space-x-4">
-					<a href="#" class="text-amber-500 hover:text-amber-600">
-						<i class="fa-brands fa-facebook-f"></i>
+
+
+				<div class="space-x-5" style="padding-between: 80px;">
+					<a href="https://www.facebook.com" class="text-amber-500 hover:text-amber-600"> <i
+						class="fa-brands fa-facebook-f"></i>
+					</a> <a href="https://x.com" class="text-amber-500 hover:text-amber-600"> <i
+						class="fa-brands fa-twitter"></i>
+					</a> <a href="https://www.instagram.com" class="text-amber-500 hover:text-amber-600"> <i
+						class="fa-brands fa-instagram"></i>
+					</a> <a href="https://linkedin.com
+					
+					" class="text-amber-500 hover:text-amber-600"> <i
+						class="fa-brands fa-linkedin-in" style="padding-right: 80px;"></i>
 					</a>
-					<a href="#" class="text-amber-500 hover:text-amber-600">
-						<i class="fa-brands fa-twitter"></i>
-					</a>
-					<a href="#" class="text-amber-500 hover:text-amber-600">
-						<i class="fa-brands fa-instagram"></i>
-					</a>
+
+
 				</div>
 			</div>
-	
-			
+
+
 			<div class="flex justify-center space-x-6 mb-4">
-				<a href="#" class="hover:text-amber-500">Home</a>
-				<a href="#" class="hover:text-amber-500">About</a>
-				<a href="#" class="hover:text-amber-500">Services</a>
-				<a href="#" class="hover:text-amber-500">Contact</a>
+				<a href="interio.html" class="hover:text-amber-500">Interio</a> <a
+					href="#" class="hover:text-amber-500">Furniture</a> <a href="#"
+					class="hover:text-amber-500">Carpentery</a>
 			</div>
-	
-			
-			<p class="text-sm text-gray-400">
-				&copy; 2024 Aacharya's Interio & Furniture. All rights reserved.
-			</p>
+
+
+			<p class="text-sm text-gray-400">&copy; 2024 Aacharya's Furniture
+				& Interio. All rights reserved.</p>
 		</div>
 	</footer>
-	
-  </body>
+
+</body>
 </html>

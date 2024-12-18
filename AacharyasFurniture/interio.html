@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aacharya's Interio</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <div>
+        <section class="bg-gray-100 py-12">
+            <div class="container mx-auto text-center">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Interio</h2>
+                
+                <!-- Grid Container -->
+                <div id="featured-products-container" 
+                     class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-auto">
+                </div>
+            </div>
+        </section>
+        
+        <script>
+            const featuredProducts = [
+                { name: "Designed Sofa", image: "assets/images/features/f1.jpg" },
+                { name: "Dining Table", image: "assets/images/features/f2.jpg" },
+                { name: "Chair and Table", image: "assets/images/features/f3.jpg" },
+                { name: "Modern Armchair", image: "assets/images/features/f4.jpg" },
+                { name: "You can place a new item", image: "#" },
+                { name: "You can place a new item", image: "#" },
+                { name: "You can place a new item", image: "#" },
+                { name: "You can place a new item", image: "#" },
+                { name: "You can place a new item", image: "#" }
+            ];
+
+            const container3 = document.getElementById("featured-products-container");
+
+            featuredProducts.forEach(item => {
+                const productDiv = document.createElement("div");
+                productDiv.className = "group flex flex-col items-center bg-white p-4 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300";
+
+                productDiv.innerHTML = `
+                    <div class="w-full bg-gray-300 rounded-lg overflow-hidden flex items-center justify-center">
+                        <img src="${item.image}" alt="${item.name}" class="max-w-full max-h-full object-contain group-hover:opacity-90 transition-opacity duration-300">
+                    </div>
+                    <p class="text-gray-700 mt-4 font-medium text-lg">${item.name}</p>
+                `;
+
+                container3.appendChild(productDiv);
+            });
+        </script>
+    </div>
+
+</body>
+</html>
