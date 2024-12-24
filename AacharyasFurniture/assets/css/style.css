@@ -562,15 +562,7 @@ ul.cart-list > li.total {
 .new-arrivals-content{margin-top: 80px;}
 
 .single-new-arrival{margin-bottom: 50px;text-align: center;}
-.single-new-arrival-bg {
-    /* width: 100%;
-    height: auto;
-    object-fit: contain; /* This ensures the image is not cropped */
-    /* -webkit-transition: .3s linear;
-    -moz-transition: .3s linear;
-    -ms-transition: .3s linear;
-    -o-transition: .3s linear;
-    transition: .3s linear; */ 
+.single-new-arrival-bg { 
     width: 100%;                /* Full width of the container */
     height: 300px;              /* Fixed height for consistency, adjust as needed */
     display: flex;              /* Flexbox for centering content */
@@ -640,15 +632,6 @@ img:hover {
 
 
 .single-new-arrival-bg img{
-    /* width:auto;
-    height:auto;
-    -webkit-transition: .3s linear;
-    -moz-transition: .3s linear;
-    -ms-transition: .3s linear;
-    -o-transition: .3s linear;
-    transition: .3s linear; */
-    
-
     width: 60%;              /* Reduce the width of the image to 60% of its container */
     height: auto;            /* Keep the aspect ratio intact */
     object-fit: contain;     /* Ensure the image fits without cropping */
@@ -1143,6 +1126,8 @@ span.feature-review {margin-left: 10px;}
     0%   {bottom:0px;}
     100%  {bottom:7px;}
 }
+
+
 
 
 /*========================Thank you=================
