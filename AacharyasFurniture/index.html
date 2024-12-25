@@ -3,16 +3,22 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <title>Aacharya's Furniture & Interio</title>
-<link href="assets/images/logo/logo.jpg"/>
+<link href="assets/images/logo/logo.jpg" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"	rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+	rel="stylesheet">
 <!-- Swiper.js CSS -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<link rel="stylesheet"
+	href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 <!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+	rel="stylesheet">
 <!-- <link rel="stylesheet" href="style.css"> -->
 
 
@@ -20,57 +26,68 @@
 <body class="bg-gray-100 text-gray-800">
 
 	<!-- Navigation bar -->
-<nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-        
-        <!-- Logo and Brand -->
-        <div class="flex items-center">
-            <img src="assets/images/logo/logo.jpg" alt="Logo" class="h-12 mr-4">
-            <div>
-                <a href="#" class="text-2xl font-bold text-amber-600 block">Aacharya's</a>
-                <span class="text-sm text-gray-500">Furniture & Interio</span>
-            </div>
-        </div>
+	<nav class="bg-white  fixed top-0 left-0 right-0 z-50">
+		<div
+			class="container mx-auto px-4 py-4 flex justify-between items-center">
 
-        <!-- Mobile Hamburger Icon -->
-        <div class="md:hidden flex items-center">
-            <button id="hamburgerButton" class="text-gray-700">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
+			<!-- Logo and Brand -->
+			<div class="flex items-center">
+				<img src="assets/images/logo/logo.jpg" alt="Logo" class="h-20 mr-3">
+				<div>
+					<a href="#" class="text-2xl font-bold text-amber-600 block">Aacharya's</a>
+					<span class="text-sm text-gray-500">Furniture & Interio</span>
+				</div>
+			</div>
 
-        <!-- Menu Links (Hidden on mobile) -->
-        <ul id="navLinks" class="hidden md:flex space-x-10 text-lg font-bold">
-            <li><a href="index.html" class="text-gray-700 hover:text-amber-600">Home</a></li>
-            <li><a href="about.html" class="text-gray-700 hover:text-amber-600">About</a></li>
-            <li class="relative">
-                <a href="services.html" class="text-gray-700 hover:text-amber-600 flex items-center" id="servicesMenuButton">
-                    Services
-                    <i id="downArrow" class="fas fa-chevron-down ml-2"></i>
-                </a>
-                <!-- Dropdown Menu -->
-                <ul id="servicesMenu" class="absolute left-0 hidden bg-white shadow-md mt-2 w-40 rounded-md">
-                    <li><a href="interio.html" class="block px-4 py-2 text-gray-700 hover:bg-amber-600 hover:text-white">Interio</a></li>
-                    <li><a href="furniture.html" class="block px-4 py-2 text-gray-700 hover:bg-amber-600 hover:text-white">Furniture</a></li>
-                    <li><a href="carpentery.html" class="block px-4 py-2 text-gray-700 hover:bg-amber-600 hover:text-white">Carpentery</a></li>
-                </ul>
-            </li>
-            <li><a href="contact.html" class="text-gray-700 hover:text-amber-600">Contact</a></li>
-        </ul>
+			<!-- Mobile Hamburger Icon -->
+			<div class="md:hidden flex items-center">
+				<button id="hamburgerButton" class="text-gray-700">
+					<i class="fas fa-bars"></i>
+				</button>
+			</div>
 
-        <!-- Mobile Menu (Hidden on larger screens) -->
-        <ul id="mobileMenu" class="md:hidden absolute top-16 left-0 right-0 bg-white shadow-md hidden">
-            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-amber-600 hover:text-white">Home</a></li>
-            <li><a href="about.html" class="block px-4 py-2 text-gray-700 hover:bg-amber-600 hover:text-white">About</a></li>
-            <li><a href="services.html" class="block px-4 py-2 text-gray-700 hover:bg-amber-600 hover:text-white">Services</a></li>
-            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-amber-600 hover:text-white">Contact</a></li>
-        </ul>
+			<!-- Menu Links (Hidden on mobile) -->
+			<ul id="navLinks" class="hidden md:flex space-x-10 text-lg font-bold">
+				<li><a href="index.html"
+					class="text-gray-700 hover:text-amber-600">Home</a></li>
+				<li><a href="about.html"
+					class="text-gray-700 hover:text-amber-600">About</a></li>
+				<li class="relative"><a href="services.html"
+					class="text-gray-700 hover:text-amber-600 flex items-center"
+					id="servicesMenuButton"> Services <i id="downArrow"
+						class="fas fa-chevron-down ml-2"></i>
+				</a> <!-- Dropdown Menu -->
+					<ul id="servicesMenu"
+						class="absolute left-0 hidden bg-white shadow-md mt-2 w-40 rounded-md">
+						<li><a href="interio.html"
+							class="block px-4 py-2 text-gray-700 hover:bg-amber-600 hover:text-white">Interio</a></li>
+						<li><a href="furniture.html"
+							class="block px-4 py-2 text-gray-700 hover:bg-amber-600 hover:text-white">Furniture</a></li>
+						<li><a href="carpentery.html"
+							class="block px-4 py-2 text-gray-700 hover:bg-amber-600 hover:text-white">Carpentery</a></li>
+					</ul></li>
+				<li><a href="contact.html"
+					class="text-gray-700 hover:text-amber-600">Contact</a></li>
+			</ul>
 
-    </div>
-</nav>
+			<!-- Mobile Menu (Hidden on larger screens) -->
+			<ul id="mobileMenu"
+				class="md:hidden absolute top-16 left-0 right-0 bg-white shadow-md hidden">
+				<li><a href="#"
+					class="block px-4 py-2 text-gray-700 hover:bg-amber-600 hover:text-white">Home</a></li>
+				<li><a href="about.html"
+					class="block px-4 py-2 text-gray-700 hover:bg-amber-600 hover:text-white">About</a></li>
+				<li><a href="services.html"
+					class="block px-4 py-2 text-gray-700 hover:bg-amber-600 hover:text-white">Services</a></li>
+				<li><a href="#"
+					class="block px-4 py-2 text-gray-700 hover:bg-amber-600 hover:text-white">Contact</a></li>
+			</ul>
 
-<!-- JavaScript for Mobile Navigation -->
-<script>
+		</div>
+	</nav>
+
+	<!-- JavaScript for Mobile Navigation -->
+	<script>
     // Toggle dropdown menu
     document.getElementById('servicesMenuButton').addEventListener('click', function(e) {
         e.preventDefault();
@@ -95,83 +112,118 @@
     });
 </script>
 
-<!-- Hero Section -->
-<!-- Hero Section -->
-<section id="hero-section" class="bg-gray-100 flex justify-center items-center min-h-screen w-full pb-1">
-    <div id="hero-carousel" class="carousel slide max-w-6xl w-full" data-bs-ride="carousel" data-bs-interval="3000">
-        
-        <!-- Carousel Indicators -->
-        <ol class="carousel-indicators">
-            <li data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" style="cursor: pointer;"></li>
-            <li data-bs-target="#hero-carousel" data-bs-slide-to="1" class="shadow-yellow-400" aria-label="Slide 2" style="cursor: pointer;"></li>
-            <li data-bs-target="#hero-carousel" data-bs-slide-to="2" class="shadow-yellow-400" aria-label="Slide 3" style="cursor: pointer;"></li>
-        </ol>
-        
-        <!-- Carousel Slides -->
-        <div class="carousel-inner">
-            <!-- Slide 1 -->
-            <div class="carousel-item active">
-                <div class="card-container max-w-6xl w-full p-6 rounded-lg flex flex-col md:flex-row items-center justify-center text-center md:text-left bg-transparent relative">
-                    <div class="md:w-1/2 flex flex-col items-center md:items-start justify-center mb-6 md:mb-0">
-                        <h2 class="text-lg md:text-xl font-semibold text-gray-700">Great Design Collection</h2>
-                        <h1 class="text-2xl md:text-4xl font-bold text-gray-900 my-4">Cloth Covered Accent Chair</h1>
-                        <p class="text-sm md:text-base text-gray-600 mb-6">Looking for great comfort with a stylish chair? Here we go: stunning looks for your lounge.</p>
-                        <a href="#" class="text-amber-600 font-semibold hover:underline" style="cursor: pointer;">More Info</a>
-                    </div>
-                    <div class="md:w-1/2 flex justify-center md:justify-end pr-0 md:pr-4">
-                        <img src="assets/images/image.png" alt="Cloth Covered Accent Chair" class="rounded-lg w-[400px]">
-                    </div>
-                </div>
-            </div>
+	<!-- Hero Section -->
+	<!-- Hero Section -->
+	<section id="hero-section"
+		class="bg-gray-100 flex justify-center items-center min-h-screen w-full pb-1">
+		<div id="hero-carousel" class="carousel slide max-w-6xl w-full"
+			data-bs-ride="carousel" data-bs-interval="3000">
 
-            <!-- Slide 2 -->
-            <div class="carousel-item">
-                <div class="card-container max-w-6xl w-full p-6 rounded-lg flex flex-col md:flex-row items-center justify-center text-center md:text-left bg-transparent relative">
-                    <div class="md:w-1/2 flex flex-col items-center md:items-start justify-center mb-6 md:mb-0">
-                        <h2 class="text-lg md:text-xl font-semibold text-gray-700">Great Design Collection</h2>
-                        <h1 class="text-2xl md:text-4xl font-bold text-gray-900 my-4">Cloth Covered Accent Chair</h1>
-                        <p class="text-sm md:text-base text-gray-600 mb-6">Looking for great comfort with a stylish chair? Here we go: stunning looks for your lounge.</p>
-                        <a href="#" class="text-amber-600 font-semibold hover:underline" style="cursor: pointer;">More Info</a>
-                    </div>
-                    <div class="md:w-1/2 flex justify-center md:justify-end pr-0 md:pr-4">
-                        <img src="assets/images/slider2.png" alt="Cloth Covered Accent Chair" class="rounded-lg w-[410px]">
-                    </div>
-                </div>
-            </div>
+			<!-- Carousel Indicators -->
+			<ol class="carousel-indicators">
+				<li data-bs-target="#hero-carousel" data-bs-slide-to="0"
+					class="active" aria-label="Slide 1" style="cursor: pointer;"></li>
+				<li data-bs-target="#hero-carousel" data-bs-slide-to="1"
+					class="shadow-yellow-400" aria-label="Slide 2"
+					style="cursor: pointer;"></li>
+				<li data-bs-target="#hero-carousel" data-bs-slide-to="2"
+					class="shadow-yellow-400" aria-label="Slide 3"
+					style="cursor: pointer;"></li>
+			</ol>
 
-            <!-- Slide 3 -->
-            <div class="carousel-item">
-                <div class="card-container max-w-6xl w-full p-6 rounded-lg flex flex-col md:flex-row items-center justify-center text-center md:text-left bg-transparent relative">
-                    <div class="md:w-1/2 flex flex-col items-center md:items-start justify-center mb-6 md:mb-0">
-                        <h2 class="text-lg md:text-xl font-semibold text-gray-700">Great Design Collection</h2>
-                        <h1 class="text-2xl md:text-4xl font-bold text-gray-900 my-4">Cloth Covered Accent Chair</h1>
-                        <p class="text-sm md:text-base text-gray-600 mb-6">Looking for great comfort with a stylish chair? Here we go: stunning looks for your lounge.</p>
-                        <a href="#" class="text-amber-600 font-semibold hover:underline" style="cursor: pointer;">More Info</a>
-                    </div>
-                    <div class="md:w-1/2 flex justify-center md:justify-end pr-0 md:pr-4">
-                        <img src="assets/images/slider3.png" alt="Cloth Covered Accent Chair" class="rounded-lg w-[502px]">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+			<!-- Carousel Slides -->
+			<div class="carousel-inner">
+				<!-- Slide 1 -->
+				<div class="carousel-item active">
+					<div
+						class="card-container max-w-6xl w-full p-6 rounded-lg flex flex-col md:flex-row items-center justify-center text-center md:text-left bg-transparent relative">
+						<div
+							class="md:w-1/2 flex flex-col items-center md:items-start justify-center mb-6 md:mb-0">
+							<h2 class="text-lg md:text-xl font-semibold text-gray-700">Great
+								Design Collection</h2>
+							<h1 class="text-2xl md:text-4xl font-bold text-gray-900 my-4">Cloth
+								Covered Accent Chair</h1>
+							<p class="text-sm md:text-base text-gray-600 mb-6">Looking
+								for great comfort with a stylish chair? Here we go: stunning
+								looks for your lounge.</p>
+							<a href="#" class="text-amber-600 font-semibold hover:underline"
+								style="cursor: pointer;">More Info</a>
+						</div>
+						<div
+							class="md:w-1/2 flex justify-center md:justify-end pr-0 md:pr-4">
+							<img src="assets/images/image.png"
+								alt="Cloth Covered Accent Chair" class="rounded-lg w-[400px]">
+						</div>
+					</div>
+				</div>
+
+				<!-- Slide 2 -->
+				<div class="carousel-item">
+					<div
+						class="card-container max-w-6xl w-full p-6 rounded-lg flex flex-col md:flex-row items-center justify-center text-center md:text-left bg-transparent relative">
+						<div
+							class="md:w-1/2 flex flex-col items-center md:items-start justify-center mb-6 md:mb-0">
+							<h2 class="text-lg md:text-xl font-semibold text-gray-700">Great
+								Design Collection</h2>
+							<h1 class="text-2xl md:text-4xl font-bold text-gray-900 my-4">Cloth
+								Covered Accent Chair</h1>
+							<p class="text-sm md:text-base text-gray-600 mb-6">Looking
+								for great comfort with a stylish chair? Here we go: stunning
+								looks for your lounge.</p>
+							<a href="#" class="text-amber-600 font-semibold hover:underline"
+								style="cursor: pointer;">More Info</a>
+						</div>
+						<div
+							class="md:w-1/2 flex justify-center md:justify-end pr-0 md:pr-4">
+							<img src="assets/images/slider2.png"
+								alt="Cloth Covered Accent Chair" class="rounded-lg w-[410px]">
+						</div>
+					</div>
+				</div>
+
+				<!-- Slide 3 -->
+				<div class="carousel-item">
+					<div
+						class="card-container max-w-6xl w-full p-6 rounded-lg flex flex-col md:flex-row items-center justify-center text-center md:text-left bg-transparent relative">
+						<div
+							class="md:w-1/2 flex flex-col items-center md:items-start justify-center mb-6 md:mb-0">
+							<h2 class="text-lg md:text-xl font-semibold text-gray-700">Great
+								Design Collection</h2>
+							<h1 class="text-2xl md:text-4xl font-bold text-gray-900 my-4">Cloth
+								Covered Accent Chair</h1>
+							<p class="text-sm md:text-base text-gray-600 mb-6">Looking
+								for great comfort with a stylish chair? Here we go: stunning
+								looks for your lounge.</p>
+							<a href="#" class="text-amber-600 font-semibold hover:underline"
+								style="cursor: pointer;">More Info</a>
+						</div>
+						<div
+							class="md:w-1/2 flex justify-center md:justify-end pr-0 md:pr-4">
+							<img src="assets/images/slider3.png"
+								alt="Cloth Covered Accent Chair" class="rounded-lg w-[502px]">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 
 
 
 
 	<!-- popular categories -->
-	
-	
-	<section id="popular-categories" class="bg-gray-100 py-1">
-	<div class="container mx-auto text-center">
-		<h2 class="text-2xl font-bold text-gray-900 mb-6">Popular Categories</h2>
-		<div id="categories-container"
-			class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-5">
+
+
+	<section id="popular-categories" class="bg-gray-100 py-0">
+		<div class="container mx-auto text-center">
+			<h2 class="text-2xl font-bold text-gray-900 mb-6">Popular
+				Categories</h2>
+			<div id="categories-container"
+				class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-5">
+			</div>
 		</div>
-	</div>
-</section>
+	</section>
 
 	<script>
 		
@@ -261,38 +313,43 @@ categories.forEach(category => {
 
 
 
-<!-- Footer -->
-<footer class="bg-gray-900 text-white py-1.5">
-    <div class="container mx-auto px-4 text-center">
-        <!-- Logo and Brand -->
-        <div class="mb-2">
-            <h1 class="text-2xl font-bold text-amber-500 hover:text-amber-600 text-xl">Aacharya's Furniture & Interio</h1>
+	<!-- Footer -->
+	<footer class="bg-gray-900 text-white py-1.5">
+		<div class="container mx-auto px-4 text-center">
+			<!-- Logo and Brand -->
+			<div class="mb-2">
+				<h1
+					class="text-2xl font-bold text-amber-500 hover:text-amber-600 text-xl">Aacharya's
+					Furniture & Interio</h1>
+			</div>
+
+			<!-- Social Links -->
+			<div class="flex justify-center space-x-3 mb-1">
+				<a href="https://www.facebook.com"
+					class="text-gray-300 hover:text-amber-600 text-xl"> <i
+					class="fa-brands fa-facebook-f"></i>
+				</a> <a href="https://x.com"
+					class="text-gray-300 hover:text-amber-600 text-xl"> <i
+					class="fa-brands fa-twitter"></i>
+				</a> <a href="https://www.instagram.com"
+					class="text-gray-300 hover:text-amber-600 text-xl"> <i
+					class="fa-brands fa-instagram"></i>
+				</a> <a href="https://linkedin.com"
+					class="text-gray-300 hover:text-amber-600 text-xl"> <i
+					class="fa-brands fa-linkedin-in"></i>
+				</a>
+			</div>
+			<!-- Copyright Text -->
+			<p class="text-sm text-gray-400">&copy; 2024 Aacharya's Furniture
+				& Interio. All rights reserved.</p>
 		</div>
+	</footer>
 
-        <!-- Social Links -->
-        <div class="flex justify-center space-x-3 mb-1">
-            <a href="https://www.facebook.com" class="text-gray-300 hover:text-amber-600 text-xl">
-                <i class="fa-brands fa-facebook-f"></i>
-            </a>
-            <a href="https://x.com" class="text-gray-300 hover:text-amber-600 text-xl">
-                <i class="fa-brands fa-twitter"></i>
-            </a>
-            <a href="https://www.instagram.com" class="text-gray-300 hover:text-amber-600 text-xl">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://linkedin.com" class="text-gray-300 hover:text-amber-600 text-xl">
-                <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-        </div>
-        <!-- Copyright Text -->
-        <p class="text-sm text-gray-400">&copy; 2024 Aacharya's Furniture & Interio. All rights reserved.</p>
-    </div>
-</footer>
-
-<!-- Swiper.js JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- Swiper.js JS -->
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<!-- Bootstrap JS -->
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
