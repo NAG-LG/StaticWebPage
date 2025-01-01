@@ -29,33 +29,33 @@
                 <div class="relative group bg-white rounded-lg shadow-lg overflow-hidden">
                     <div class="cursor-pointer" onclick="openModal(1)">
                         <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity">See More</div>
-                        <img src="assets/images/beds/bed1.jpg" alt="Image 1" class="w-full h-48 object-cover">
+                        <img src="assets/images/FurnitureGallery/chairs/chair1/chair1-1.jpg" alt="Image 1" class="object-cover"> <!-- class="w-full h-48 object-cover"-->
                     </div>
                     <div class="p-4">
-                        <h2 class="text-lg font-bold text-gray-800">Title for Image 1</h2>
-                        <p class="text-gray-600">Description or additional text related to Image 1. Click the card for more details.</p>
+                        <h2 class="text-lg font-bold text-gray-800">Chair Code:CH-C12A</h2>
+                        <p class="text-gray-600">Teak wood.</p>
                     </div>
                 </div>
                 <!-- Card 2 -->
                 <div class="relative group bg-white rounded-lg shadow-lg overflow-hidden">
                     <div class="cursor-pointer" onclick="openModal(2)">
                         <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity">See More</div>
-                        <img src="https://via.placeholder.com/300" alt="Image 2" class="w-full h-48 object-cover">
+                        <img src="assets/images/FurnitureGallery/chairs/chair2/chair2-1.png" alt="Image 2" class="object-cover">
                     </div>
                     <div class="p-4">
-                        <h2 class="text-lg font-bold text-gray-800">Title for Image 2</h2>
-                        <p class="text-gray-600">Description or additional text related to Image 2. Click the card for more details.</p>
+                        <h2 class="text-lg font-bold text-gray-800">Chair Code:CH-S12A</h2>
+                        <p class="text-gray-600">Gandra wood.</p>
                     </div>
                 </div>
                 <!-- Card 3 -->
                 <div class="relative group bg-white rounded-lg shadow-lg overflow-hidden">
                     <div class="cursor-pointer" onclick="openModal(3)">
                         <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity">See More</div>
-                        <img src="https://via.placeholder.com/300" alt="Image 3" class="w-full h-48 object-cover">
+                        <img src="assets/images/FurnitureGallery/chairs/chair3/chair3-1.png" alt="Image 3" class="object-cover">
                     </div>
                     <div class="p-4">
-                        <h2 class="text-lg font-bold text-gray-800">Title for Image 3</h2>
-                        <p class="text-gray-600">Description or additional text related to Image 3. Click the card for more details.</p>
+                        <h2 class="text-lg font-bold text-gray-800">Chair Code:CH-S12B</h2>
+                        <p class="text-gray-600">Gandra wood.</p>
                     </div>
                 </div>
             </div>
@@ -125,9 +125,9 @@
         let totalSlides = 0;
 
         const slidesContent = {
-            1: ["assets/images/beds/bed1.jpg", "assets/images/beds/bed2.jpg"],
-            2: ["https://via.placeholder.com/600x300/00ff00/ffffff?text=Slide+2-1"],
-            3: ["https://via.placeholder.com/600x300/0000ff/ffffff?text=Slide+3-1"]
+            1: ["assets/images/FurnitureGallery/chairs/chair1/chair1-1.jpg", "assets/images/FurnitureGallery/chairs/chair1/chair1-2.jpg", "assets/images/FurnitureGallery/chairs/chair1/chair1-3.jpg", "assets/images/FurnitureGallery/chairs/chair1/chair1-4.jpg", "assets/images/FurnitureGallery/chairs/chair1/chair1-5.jpg", "assets/images/FurnitureGallery/chairs/chair1/chair1-6.jpg"],
+            2: ["assets/images/FurnitureGallery/chairs/chair2/chair2-1.png", "assets/images/FurnitureGallery/chairs/chair2/chair2-2.png", "assets/images/FurnitureGallery/chairs/chair2/chair2-3.png", "assets/images/FurnitureGallery/chairs/chair2/chair2-4.png"],
+            3: ["assets/images/FurnitureGallery/chairs/chair3/chair3-1.png", "assets/images/FurnitureGallery/chairs/chair3/chair3-2.png", "assets/images/FurnitureGallery/chairs/chair3/chair3-3.png", "assets/images/FurnitureGallery/chairs/chair3/chair3-4.png"]
         };
 
         function openModal(index) {
@@ -136,7 +136,7 @@
             slides.forEach(src => {
                 const slide = document.createElement("div");
                 slide.className = "w-full flex-shrink-0";
-                slide.innerHTML = `<img src="${src}" alt="Slide" class="w-full h-full object-cover">`;
+                slide.innerHTML = `<img src="${src}" alt="Slide" class="object-cover">`;
                 carousel.appendChild(slide);
             });
             currentSlide = 0;
